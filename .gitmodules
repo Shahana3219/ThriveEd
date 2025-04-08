@@ -1,0 +1,3 @@
+[submodule "lib/projectsel"]
+	path = lib/projectsel
+	url = https://github.com/Shahana3219/projectsel.git
