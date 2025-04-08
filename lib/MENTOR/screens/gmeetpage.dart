@@ -1,0 +1,152 @@
+import 'package:emotional_learning_platform/features/create_join_room/create_room_page.dart';
+import 'package:emotional_learning_platform/features/create_join_room/join_room_page.dart';
+import 'package:flutter/material.dart';
+import 'package:emotional_learning_platform/design_system/text_styles.dart';
+import 'package:get/get.dart';
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF1A1E78),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: const EdgeInsets.only(top: 60, left: 30),
+            padding: const EdgeInsets.only(right: 20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Thrive Ed Room",
+                  style:
+                      AppTextStyles.large.copyWith(fontWeight: FontWeight.w600),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  "Easy connect with friends via video call.",
+                  style:
+                      AppTextStyles.large.copyWith(fontWeight: FontWeight.w600),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              margin: const EdgeInsets.only(top: 30),
+              padding: const EdgeInsets.only(right: 24, top: 42, bottom: 16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(25),
+                  topRight: Radius.circular(25),
+                ),
+              ),
+              child: Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CreateRoomPage(),
+                        ),
+                      );
+                    },
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 6,
+                          child: Image.asset(
+                            "assets/create_meeting_vector.png",
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        Expanded(
+                          flex: 4,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Create Room",
+                                style: AppTextStyles.large.copyWith(
+                                  color: const Color(0xFF1A1E78),
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                "create a unique Thrive Ed meeting and ask others to join the same.",
+                                style: AppTextStyles.regular.copyWith(
+                                  color: const Color(0xFF1A1E78),
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 2,
+                    margin:
+                        const EdgeInsets.only(left: 24, right: 24, bottom: 32),
+                    color: const Color(0xFF1A1E78),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => JoinRoomPage(),
+                        ),
+                      );
+                    },
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 6,
+                          child: Image.asset(
+                            "assets/join_meeting_vector.png",
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        Expanded(
+                          flex: 4,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Join Room",
+                                style: AppTextStyles.large
+                                    .copyWith(color: const Color(0xFF1A1E78)),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                "Join Thrive Ed meeting created by your friend.",
+                                style: AppTextStyles.regular.copyWith(
+                                  color: const Color(0xFF1A1E78),
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "C:\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\Admin\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\Admin\\Downloads\\emotional_learning_platform\\emotional_learning_platform\\android\\app\\.cxx\\Debug\\4u5u6j86\\armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\Admin\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\Admin\\Downloads\\emotional_learning_platform\\emotional_learning_platform\\android\\app\\.cxx\\Debug\\4u5u6j86\\armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
