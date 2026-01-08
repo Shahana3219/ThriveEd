@@ -1,2 +1,2 @@
 # ThriveEd
-A comprehensive Social Emotional Learning Platform
+A comprehensive Social Emotional Learning Platform.
